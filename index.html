@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMLF | Tienda de Ropa online Honduras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logopestaña.jpeg" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+       nav{
+        background-color:rgb(236, 228, 228) ;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    .menu{
+        display: flex;
+        gap: 0px;
+    }
+    .iconos{
+        display: flex;
+        gap: 15px;
+    }
+    ul{
+        list-style: none;
+    }
+    
+    li{
+        display: inline-block ;
+        margin-right: 20px;
+        font-size: 15px;
+        transition: all 0.2s ease;
+        padding: 10px 5px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    img{
+        width: 100px;
+        object-fit: cover;      
+    }
+    .logo{
+        float: left;
+        overflow: hidden;
+        
+    }
+    .cat{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .cat:active{
+        transform: scale(1.1);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .icono-perfil{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+    .icono-lupa{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .icono-perfil:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .icono-perfil:hover .login {
+      display: block;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      left: 5px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button[type=submit]:active {
+        background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+        color: rgb(255, 255, 255);
+    }
+
+    #parallax{
+        width:100%;
+        height: 250px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.747)),
+        url('https://img.freepik.com/psd-gratis/mujeres-geniales-tiro-medio-posando-juntas_23-2150183111.jpg') ;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    h1{
+        font-size: 70px;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #b7c0b9;
+      color: black;
+    }
+
+    .catropa{
+        width:100%;
+        height: 600px;
+        padding: 2%;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        gap:10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr 1fr 1fr;
+        grid-template-areas:
+        "T1 T1"
+        "A B"
+        "C D";
+    }
+    .Titulo1{
+        grid-area: T1;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .blusas{
+        grid-area: A;
+        height: 100%;
+        background-image: url('https://m.media-amazon.com/images/I/51yFpsH0vbS._AC_.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+    }
+    .blusas:hover{
+        transform: scale(1.05);
+        background-image: url('https://image.made-in-china.com/226f3j00SohlGwugbZzp/Blusas-elegantes-de-encaje-y-chiffon-blanco-de-alta-calidad-para-mujeres.webp');
+    }
+    .jeans{
+        height: 100%;
+        background-image: url('https://http2.mlstatic.com/D_NQ_NP_998614-MLA84127222404_052025-O.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        grid-area: B;
+    }
+    .jeans:hover{
+        transform: scale(1.05);
+        background-image: url('https://cdn.shopify.com/s/files/1/0564/3776/8369/files/chica-posando-con-jeans-rectos-color-oscuro_600x600.jpg?v=1676286783');
+    }
+
+
+    .vestidos{
+        height: 100%;
+        background-image: url('https://www.ubuy.hn/productimg/?image=aHR0cHM6Ly9pbWFnZXMtY2RuLnVidXkuaG4vNjYyMzAwYzhiMjg5ZDQ1NDYyNGM2Y2Y1LTIwMjMtdmVzdGlkb3MtZGUtZmllc3RhLWNvcnRvcy1wYXJhLmpwZw.jpg');
+        background-size: cover; 
+        transition: all 0.5s ease;
+        grid-area: C;
+    }
+    .vestidos:hover{
+        transform: scale(1.05);
+        background-image: url('https://boral.com.co/cdn/shop/files/Ariel100_14.jpg?v=1744126868&width=1775');
+    }
+    .zapatos{
+        height: 100%;
+        background-image: url('https://image.made-in-china.com/202f0j00GFOkbNWtSMcS/Mature-Sexy-Women-Wedges-Sandals-Summer-PU-Lining-Feature-Material-Origin-Type-Season-Place-Model-Height-Outsole.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        grid-area: D;
+     }
+    .zapatos:hover{
+        transform: scale(1.05);
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221004/pngtree-autumns-brown-leather-chelsea-boots-for-women-model-shoes-trendy-photo-image_49125238.jpg');
+    }
+    H3{
+        font-size: 30px;
+        font-family: Arial, sans-serif;
+        position: absolute;
+        color: rgb(0, 0, 0);
+        transition: all 0.5s ease;
+        
+    }
+    p{
+        cursor: pointer;
+    }
+    
+    .cathombres{
+        width:100%;
+        height: 1400px;
+        background-color: rgb(226, 240, 240);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        gap:10px;
+        display: grid;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+        grid-template-areas:
+        "T2"
+        "A1 "
+        "B2"
+        "C3" 
+        "D4";
+        padding: 2%;
+    }
+    .Titulo2{
+        padding-top: 10px;
+        grid-area: T2;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .jeanshombre{
+        width: 100%;
+        height: 100%; 
+        background-color: black;
+        background-image: url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        border-radius: 20px ;
+        grid-area: A1;
+
+        animation-name: cambio1;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    
+    @keyframes cambio1{
+        0%{
+            background-image:url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg')
+        }
+
+        20%{
+            background-image: url('https://st.depositphotos.com/26539336/52109/i/450/depositphotos_521090408-stock-photo-man-wearing-classic-black-shoes.jpg');
+        }
+        40%{
+            background-image: url('https://img.freepik.com/foto-gratis/hombre-tiro-medio-posando-gorra-camionero_23-2149410271.jpg');
+        }
+        60%{
+            background-image: url('https://thumbs.dreamstime.com/b/vista-lateral-do-jovem-ginger-macho-modelo-de-moda-masculina-em-jeans-jaqueta-denim-e-botas-couro-comprimento-corpo-inteiro-191883033.jpg');
+        }
+        80%{
+            background-image: url('https://img.freepik.com/foto-gratis/seccion-baja-mano-hombre-negocios-atar-cordones-zapatos_23-2147937473.jpg?semt=ais_hybrid&w=740');
+
+        }
+        100%{
+            background-image: url('https://www.shutterstock.com/image-photo/man-wearing-all-black-cap-600nw-2046363236.jpg');
+
+        }
+    }
+
+    .zapatoshombre{
+        width: 100%;
+        height: 100%; 
+        background-color: black;
+        background-image: url('https://img.freepik.com/foto-gratis/retrato-hombre_1296-626.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 100px black;
+        grid-area: B2;
+        border-radius: 20px ;
+        animation-name: cambio2;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+
+    @keyframes cambio2{
+          0%{
+            background-image:url('https://img.freepik.com/foto-gratis/retrato-hombre_1296-626.jpg')
+        }
+
+        20%{
+            background-image: url('https://i.pinimg.com/736x/ac/f1/d6/acf1d630231879fa5b639723f6e1cc8e.jpg');
+        }
+        40%{
+            background-image: url('https://i.pinimg.com/474x/45/04/f8/4504f8af85725a5453be836c9f3d63f9.jpg');
+        }
+        60%{
+            background-image: url('https://img.freepik.com/foto-gratis/hombre-guapo-bufanda-gafas-moda_329181-3720.jpg');
+        }
+        80%{
+            background-image: url('https://s.alicdn.com/@sc04/kf/H8d3dcf4c95c2495ba3afca04e85c00bff.jpg_300x300.jpg');
+
+        }
+        100%{
+            background-image: url('https://i.pinimg.com/originals/f0/fa/5f/f0fa5ff4765b78ed95aecdf40798742b.jpg');
+
+        }
+    }
+
+    .gorrashombre{
+        width: 100%;
+        height: 100%; 
+        background-color: black;
+        background-image: url('https://st3.depositphotos.com/5665898/13376/i/450/depositphotos_133761294-stock-photo-the-young-man-in-a.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        border-radius: 20px ;
+        grid-area: C3;
+        animation-name: cambio3;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    @keyframes cambio3{
+          0%{
+            background-image:url('https://st3.depositphotos.com/5665898/13376/i/450/depositphotos_133761294-stock-photo-the-young-man-in-a.jpg')
+        }
+
+        20%{
+            background-image: url('https://img.freepik.com/foto-gratis/joven-apuesto-musculoso-hombre-modelo-masculino-chaqueta-cuero-posando-estudio-mostrando-sus-musculos-abdominales_158538-2279.jpg?semt=ais_hybrid&w=740');
+        }
+        40%{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJxzJSr41FANKRkJkHl8Mm4R4DTHdvImT-_Q&s');
+        }
+        60%{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzetjONwAICLdOpI516AJqXyTsUPQ3jtXNTw&s');
+        }
+        80%{
+            background-image: url('https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFuJTIwaW4lMjBzdWl0fGVufDB8fDB8fHww');
+
+        }
+        100%{
+            background-image: url('https://static.vecteezy.com/system/resources/previews/010/413/821/large_2x/stylish-indian-model-man-in-casual-clothes-and-sunglasses-posed-outdoor-at-street-of-india-photo.jpg');
+
+        }
+    }
+    h5{
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-size: 30px;
+        text-shadow: 0px 8px 15px black;
+        grid-area: D4;
+    }
+
+    .catniños{
+        width:100%;
+        height: 300px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgb(0, 0, 0)),
+        url('https://www.m360.cl/noticias/site/artic/20170912/imag/foto_0000001020170912152558.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 0.2fr 1fr;
+        grid-template-areas:
+        "T3 T3"
+        "AA BB";
+        padding: 3%;
+    }
+    .Titulo3{
+        grid-area:  T3;
+        padding-top: 10px;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        color: aliceblue;
+
+    }
+    .niño{
+        background-image: url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        grid-area: AA;
+        transition: all 0.3s ease;
+        animation-name: fotoniños;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niño:hover{
+        transform: scale(1.1);
+    }
+    @keyframes fotoniños{
+        0%{
+            background-image:url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg')
+        }
+
+        20%{
+            background-image: url('https://i.pinimg.com/originals/99/99/38/999938938293fa02972bfdb19168ca60.jpg');
+        }
+        40%{
+            background-image: url('https://thumbs.dreamstime.com/b/chico-adolescente-de-moda-posando-en-oto%C3%B1o-chaleco-aislado-la-luz-un-hinchado-amarillo-una-chaqueta-sin-mangas-abajo-con-capucha-216735648.jpg');
+        }
+        60%{
+            background-image: url('https://i.pinimg.com/originals/05/af/b4/05afb48bb78b3ca80d680c7030f9ebc2.jpg');
+        }
+        80%{
+            background-image: url('https://thumbs.dreamstime.com/b/chico-en-ch%C3%A1ndal-caliente-saltando-hasta-aislado-de-estudio-tiro-alegre-con-traje-deportivo-salta-alto-escolar-anuncia-ropa-210489787.jpg');
+
+        }
+        100%{
+            background-image: url('https://thumbs.dreamstime.com/b/adolescente-sonriente-en-un-chaleco-acolchado-o-chaqueta-de-plum%C3%B3n-listo-para-pasar-las-vacaciones-invierno-y-la-comodidad-216736389.jpg');
+
+        }
+    }
+
+  .niña{
+        background-image: url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        grid-area: BB;
+        animation-name: fotoniñas;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niña:hover{
+        transform: scale(1.1);
+    }
+    @keyframes fotoniñas{
+         0%{
+            background-image:url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740')
+        }
+
+        20%{
+            background-image: url('https://imgcdn.stablediffusionweb.com/2024/12/8/1ae1acb1-ac9e-46d0-9bcc-a25697742daf.jpg');
+        }
+        40%{
+            background-image: url('https://ae01.alicdn.com/kf/H296be6d03bb64baebd2a9720f5d599b1V.jpg_640x640Q90.jpg_.webp');
+        }
+        60%{
+            background-image: url('https://i.pinimg.com/564x/73/88/c6/7388c6af5780ea3c9ad72be177717360.jpg');
+        }
+        80%{
+            background-image: url('https://media.istockphoto.com/id/1294345604/es/foto/linda-ni%C3%B1a-divirti%C3%A9ndose-en-la-naturaleza.jpg?s=612x612&w=0&k=20&c=ypZBU5Q0KZO73xK8Lb2UHzWZgWZjj8A0ZQIwsqEvwSc=');
+
+        }
+        100%{
+            background-image: url('https://lbchile.com/wp-content/uploads/2021/07/sertpoleracortayfaldajuv38-XML006.webp');
+
+        }
+    }
+    h6{
+        font-size: 20px;
+        color: #aaa;
+    }
+    .footer {
+    background-color: rgb(236, 228, 228);
+    color: #9c9b9b;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .footercontent h6 {
+    margin-bottom: 10px;
+    }
+
+    .footerlinks{
+    margin: 15px 0;
+    }
+
+    .footerredes {
+    margin: 15px 0;
+    }
+
+    .footerlinks a{
+    color: #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    .footerredes a {
+    color:  #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    .footerlinks a:hover{
+    color: #000000;
+    text-decoration: underline;
+    }
+    .footerredes a:hover {
+    color: #000000;
+    text-decoration: underline;
+    }
+
+    .footercopy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    }
+
+
+    /*Table*/
+@media screen and (min-width:768px) {
+    .login{
+        left: -220px;
+    }
+    .Titulo1{
+        display: none;
+    }
+    .Titulo2{
+        display: none;
+    }
+    .Titulo3{
+        display: none;
+    }
+    
+    nav{
+        background-color:rgb(236, 228, 228) ;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    .menu{
+        display: flex;
+        gap: 0px;
+    }
+    .iconos{
+        display: flex;
+        gap: 15px;
+    }
+    ul{
+        list-style: none;
+    }
+    
+    li{
+        display: inline-block ;
+        margin-right: 20px;
+        font-size: 15px;
+        transition: all 0.2s ease;
+        padding: 10px 5px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    img{
+        width: 100px;
+        object-fit: cover;      
+    }
+    .logo{
+        float: left;
+        overflow: hidden;
+        
+    }
+    .cat{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .cat:active{
+        transform: scale(1.1);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .icono-perfil{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+    .icono-lupa{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .icono-perfil:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .icono-perfil:hover .login {
+      display: block;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button[type=submit]:active {
+        background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+    #parallax{
+        width:100%;
+        height: 450px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.747)),
+        url('https://img.freepik.com/psd-gratis/mujeres-geniales-tiro-medio-posando-juntas_23-2150183111.jpg') ;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 200px;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #b7c0b9;
+      color: black;
+    }
+
+    .catropa{
+        width:100%;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        display: flex;
+        position: relative;
+    }
+
+    .blusas{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://m.media-amazon.com/images/I/51yFpsH0vbS._AC_.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .blusas:hover{
+        transform: scale(1.1);
+        background-image: url('https://image.made-in-china.com/226f3j00SohlGwugbZzp/Blusas-elegantes-de-encaje-y-chiffon-blanco-de-alta-calidad-para-mujeres.webp');
+    }
+    .jeans{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://http2.mlstatic.com/D_NQ_NP_998614-MLA84127222404_052025-O.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .jeans:hover{
+        transform: scale(1.1);
+        background-image: url('https://cdn.shopify.com/s/files/1/0564/3776/8369/files/chica-posando-con-jeans-rectos-color-oscuro_600x600.jpg?v=1676286783');
+    }
+
+
+    .vestidos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://www.ubuy.hn/productimg/?image=aHR0cHM6Ly9pbWFnZXMtY2RuLnVidXkuaG4vNjYyMzAwYzhiMjg5ZDQ1NDYyNGM2Y2Y1LTIwMjMtdmVzdGlkb3MtZGUtZmllc3RhLWNvcnRvcy1wYXJhLmpwZw.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .vestidos:hover{
+        transform: scale(1.1);
+        background-image: url('https://boral.com.co/cdn/shop/files/Ariel100_14.jpg?v=1744126868&width=1775');
+    }
+    .zapatos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://image.made-in-china.com/202f0j00GFOkbNWtSMcS/Mature-Sexy-Women-Wedges-Sandals-Summer-PU-Lining-Feature-Material-Origin-Type-Season-Place-Model-Height-Outsole.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .zapatos:hover{
+        transform: scale(1.1);
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221004/pngtree-autumns-brown-leather-chelsea-boots-for-women-model-shoes-trendy-photo-image_49125238.jpg');
+    }
+    H3{
+        font-size: 30px;
+        font-family: Arial, sans-serif;
+        position: absolute;
+        color: black;
+        
+    }
+    p{
+        cursor: pointer;
+    }
+    
+    .cathombres{
+        width:100%;
+        height: 500px;
+        background-color: rgb(226, 240, 240);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        display: flex;
+        gap: 10px;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .jeanshombre{
+        width: 200px;
+        height: 300px; 
+        background-color: black;
+        background-image: url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        animation-name: cambio1;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    
+    @keyframes cambio1{
+        0%{
+            background-image:url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg')
+        }
+
+        20%{
+            background-image: url('https://st.depositphotos.com/26539336/52109/i/450/depositphotos_521090408-stock-photo-man-wearing-classic-black-shoes.jpg');
+        }
+        40%{
+            background-image: url('https://img.freepik.com/foto-gratis/hombre-tiro-medio-posando-gorra-camionero_23-2149410271.jpg');
+        }
+        60%{
+            background-image: url('https://thumbs.dreamstime.com/b/vista-lateral-do-jovem-ginger-macho-modelo-de-moda-masculina-em-jeans-jaqueta-denim-e-botas-couro-comprimento-corpo-inteiro-191883033.jpg');
+        }
+        80%{
+            background-image: url('https://img.freepik.com/foto-gratis/seccion-baja-mano-hombre-negocios-atar-cordones-zapatos_23-2147937473.jpg?semt=ais_hybrid&w=740');
+
+        }
+        100%{
+            background-image: url('https://www.shutterstock.com/image-photo/man-wearing-all-black-cap-600nw-2046363236.jpg');
+
+        }
+    }
+
+    .zapatoshombre{
+        width: 300px;
+        height: 400px; 
+        background-color: black;
+        background-image: url('https://img.freepik.com/foto-gratis/retrato-hombre_1296-626.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 100px black;
+        animation-name: cambio2;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+
+    @keyframes cambio2{
+          0%{
+            background-image:url('https://img.freepik.com/foto-gratis/retrato-hombre_1296-626.jpg')
+        }
+
+        20%{
+            background-image: url('https://i.pinimg.com/736x/ac/f1/d6/acf1d630231879fa5b639723f6e1cc8e.jpg');
+        }
+        40%{
+            background-image: url('https://i.pinimg.com/474x/45/04/f8/4504f8af85725a5453be836c9f3d63f9.jpg');
+        }
+        60%{
+            background-image: url('https://img.freepik.com/foto-gratis/hombre-guapo-bufanda-gafas-moda_329181-3720.jpg');
+        }
+        80%{
+            background-image: url('https://s.alicdn.com/@sc04/kf/H8d3dcf4c95c2495ba3afca04e85c00bff.jpg_300x300.jpg');
+
+        }
+        100%{
+            background-image: url('https://i.pinimg.com/originals/f0/fa/5f/f0fa5ff4765b78ed95aecdf40798742b.jpg');
+
+        }
+    }
+
+    .gorrashombre{
+        width: 200px;
+        height: 300px; 
+        background-color: black;
+        background-image: url('https://st3.depositphotos.com/5665898/13376/i/450/depositphotos_133761294-stock-photo-the-young-man-in-a.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        animation-name: cambio3;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    @keyframes cambio3{
+          0%{
+            background-image:url('https://st3.depositphotos.com/5665898/13376/i/450/depositphotos_133761294-stock-photo-the-young-man-in-a.jpg')
+        }
+
+        20%{
+            background-image: url('https://img.freepik.com/foto-gratis/joven-apuesto-musculoso-hombre-modelo-masculino-chaqueta-cuero-posando-estudio-mostrando-sus-musculos-abdominales_158538-2279.jpg?semt=ais_hybrid&w=740');
+        }
+        40%{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJxzJSr41FANKRkJkHl8Mm4R4DTHdvImT-_Q&s');
+        }
+        60%{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzetjONwAICLdOpI516AJqXyTsUPQ3jtXNTw&s');
+        }
+        80%{
+            background-image: url('https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFuJTIwaW4lMjBzdWl0fGVufDB8fDB8fHww');
+
+        }
+        100%{
+            background-image: url('https://static.vecteezy.com/system/resources/previews/010/413/821/large_2x/stylish-indian-model-man-in-casual-clothes-and-sunglasses-posed-outdoor-at-street-of-india-photo.jpg');
+
+        }
+    }
+    h5{
+        font-family: "Dancing Script", cursive;
+        font-size: 30px;
+        text-shadow: 0px 8px 15px black;
+    }
+
+    .catniños{
+        width:100%;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgb(0, 0, 0)),
+        url('https://www.m360.cl/noticias/site/artic/20170912/imag/foto_0000001020170912152558.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .niño{
+        background-image: url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg');
+        background-size: 100%;
+        width: 400px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniños;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niño:hover{
+        transform: scale(1.1);
+    }
+    @keyframes fotoniños{
+        0%{
+            background-image:url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg')
+        }
+
+        20%{
+            background-image: url('https://i.pinimg.com/originals/99/99/38/999938938293fa02972bfdb19168ca60.jpg');
+        }
+        40%{
+            background-image: url('https://thumbs.dreamstime.com/b/chico-adolescente-de-moda-posando-en-oto%C3%B1o-chaleco-aislado-la-luz-un-hinchado-amarillo-una-chaqueta-sin-mangas-abajo-con-capucha-216735648.jpg');
+        }
+        60%{
+            background-image: url('https://i.pinimg.com/originals/05/af/b4/05afb48bb78b3ca80d680c7030f9ebc2.jpg');
+        }
+        80%{
+            background-image: url('https://thumbs.dreamstime.com/b/chico-en-ch%C3%A1ndal-caliente-saltando-hasta-aislado-de-estudio-tiro-alegre-con-traje-deportivo-salta-alto-escolar-anuncia-ropa-210489787.jpg');
+
+        }
+        100%{
+            background-image: url('https://thumbs.dreamstime.com/b/adolescente-sonriente-en-un-chaleco-acolchado-o-chaqueta-de-plum%C3%B3n-listo-para-pasar-las-vacaciones-invierno-y-la-comodidad-216736389.jpg');
+
+        }
+    }
+
+  .niña{
+        background-image: url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniñas;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niña:hover{
+        transform: scale(1.1);
+    }
+    @keyframes fotoniñas{
+         0%{
+            background-image:url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740')
+        }
+
+        20%{
+            background-image: url('https://imgcdn.stablediffusionweb.com/2024/12/8/1ae1acb1-ac9e-46d0-9bcc-a25697742daf.jpg');
+        }
+        40%{
+            background-image: url('https://ae01.alicdn.com/kf/H296be6d03bb64baebd2a9720f5d599b1V.jpg_640x640Q90.jpg_.webp');
+        }
+        60%{
+            background-image: url('https://i.pinimg.com/564x/73/88/c6/7388c6af5780ea3c9ad72be177717360.jpg');
+        }
+        80%{
+            background-image: url('https://media.istockphoto.com/id/1294345604/es/foto/linda-ni%C3%B1a-divirti%C3%A9ndose-en-la-naturaleza.jpg?s=612x612&w=0&k=20&c=ypZBU5Q0KZO73xK8Lb2UHzWZgWZjj8A0ZQIwsqEvwSc=');
+
+        }
+        100%{
+            background-image: url('https://lbchile.com/wp-content/uploads/2021/07/sertpoleracortayfaldajuv38-XML006.webp');
+
+        }
+    }
+
+    .footer {
+    background-color: rgb(236, 228, 228);
+    color: black;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .footercontent h6 {
+    margin-bottom: 10px;
+    }
+
+    .footerlinks{
+    margin: 15px 0;
+    }
+
+    .footerredes {
+    margin: 15px 0;
+    }
+
+    .footerlinks a{
+    color: #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    .footerredes a {
+    color:  #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    .footerlinks a:hover{
+    color: #000000;
+    text-decoration: underline;
+    }
+    .footerredes a:hover {
+    color: #000000;
+    text-decoration: underline;
+    }
+
+    .footercopy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    }
+
+
+
+    }
+@media (min-width: 769px) and (max-width: 1023px){
+        .Titulo1{
+        display: none;
+        }
+        .Titulo2{
+            display: none;
+        }
+        .Titulo3{
+            display: none;
+        }
+        nav {
+            padding: 20px;
+            justify-content: space-between;
+
+        }
+
+        img {
+            width: 150px;
+            object-fit: cover; 
+        }
+
+        .li{
+            font-size: 15px;
+            padding: 10px 5px;
+        }
+
+        .logo {
+            padding-left: 5px;
+        }
+
+        .cat {
+            font-size: 20px;
+        }
+
+        .cat:active {
+            transform: scale(1.1);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+        #parallax{
+        width:100%;
+        height: 350px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.747)),
+        url('https://img.freepik.com/psd-gratis/mujeres-geniales-tiro-medio-posando-juntas_23-2150183111.jpg') ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .blusas{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://m.media-amazon.com/images/I/51yFpsH0vbS._AC_.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .blusas:hover{
+        transform: scale(1.1);
+        background-image: url('https://image.made-in-china.com/226f3j00SohlGwugbZzp/Blusas-elegantes-de-encaje-y-chiffon-blanco-de-alta-calidad-para-mujeres.webp');
+    }
+    .jeans{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://http2.mlstatic.com/D_NQ_NP_998614-MLA84127222404_052025-O.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .jeans:hover{
+        transform: scale(1.1);
+        background-image: url('https://cdn.shopify.com/s/files/1/0564/3776/8369/files/chica-posando-con-jeans-rectos-color-oscuro_600x600.jpg?v=1676286783');
+    }
+
+
+    .vestidos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://www.ubuy.hn/productimg/?image=aHR0cHM6Ly9pbWFnZXMtY2RuLnVidXkuaG4vNjYyMzAwYzhiMjg5ZDQ1NDYyNGM2Y2Y1LTIwMjMtdmVzdGlkb3MtZGUtZmllc3RhLWNvcnRvcy1wYXJhLmpwZw.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .vestidos:hover{
+        transform: scale(1.1);
+        background-image: url('https://boral.com.co/cdn/shop/files/Ariel100_14.jpg?v=1744126868&width=1775');
+    }
+    .zapatos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://image.made-in-china.com/202f0j00GFOkbNWtSMcS/Mature-Sexy-Women-Wedges-Sandals-Summer-PU-Lining-Feature-Material-Origin-Type-Season-Place-Model-Height-Outsole.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .zapatos:hover{
+        transform: scale(1.1);
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221004/pngtree-autumns-brown-leather-chelsea-boots-for-women-model-shoes-trendy-photo-image_49125238.jpg');
+    }
+
+    .cathombres{
+        width:100%;
+        height: 500px;
+        background-color: rgb(226, 240, 240);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        display: flex;
+        gap: 10px;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .jeanshombre{
+        width: 180px;
+        margin-left: 15px;
+        height: 300px; 
+        background-color: black;
+        background-image: url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        animation-name: cambio1;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    
+    h5{
+        font-family: "Dancing Script", cursive;
+        font-size: 35px;
+        padding-left: 2px;
+        text-shadow: 0px 8px 15px black;
+        }
+        
+    .niño{
+        background-image: url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg');
+        background-size: 100%;
+        width: 320px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniños;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+
+    .niña{
+        background-image: url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 320px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniñas;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    
+    }
+    
+
+    @media screen and (min-width:1024px) {
+        nav {
+            padding: 30px;
+        }
+
+        img {
+            width: 200px;
+            object-fit: cover; 
+        }
+
+        .li{
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+
+        .logo {
+            padding-left: 2px;
+        }
+        .menu{
+            display: flex;
+            gap: 20px;
+        }
+
+        .cat {
+            font-size: 25px;
+            
+        }
+
+        .cat:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+
+        .icono-perfil{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+    .icono-lupa{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .icono-perfil:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .icono-perfil:hover .login {
+      display: block;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button[type=submit]:active {
+        background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+    #parallax{
+        width:100%;
+        height: 450px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.747)),
+        url('https://img.freepik.com/psd-gratis/mujeres-geniales-tiro-medio-posando-juntas_23-2150183111.jpg') ;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 200px;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #b7c0b9;
+      color: black;
+    }
+
+    .catropa{
+        width:100%;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        display: flex;
+        position: relative;
+    }
+
+    .blusas{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://m.media-amazon.com/images/I/51yFpsH0vbS._AC_.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .blusas:hover{
+        transform: scale(1.1);
+        background-image: url('https://image.made-in-china.com/226f3j00SohlGwugbZzp/Blusas-elegantes-de-encaje-y-chiffon-blanco-de-alta-calidad-para-mujeres.webp');
+    }
+    .jeans{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://http2.mlstatic.com/D_NQ_NP_998614-MLA84127222404_052025-O.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .jeans:hover{
+        transform: scale(1.1);
+        background-image: url('https://cdn.shopify.com/s/files/1/0564/3776/8369/files/chica-posando-con-jeans-rectos-color-oscuro_600x600.jpg?v=1676286783');
+    }
+
+
+    .vestidos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://www.ubuy.hn/productimg/?image=aHR0cHM6Ly9pbWFnZXMtY2RuLnVidXkuaG4vNjYyMzAwYzhiMjg5ZDQ1NDYyNGM2Y2Y1LTIwMjMtdmVzdGlkb3MtZGUtZmllc3RhLWNvcnRvcy1wYXJhLmpwZw.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .vestidos:hover{
+        transform: scale(1.1);
+        background-image: url('https://boral.com.co/cdn/shop/files/Ariel100_14.jpg?v=1744126868&width=1775');
+    }
+    .zapatos{
+        width: 100%;
+        height: 400px;
+        background-image: url('https://image.made-in-china.com/202f0j00GFOkbNWtSMcS/Mature-Sexy-Women-Wedges-Sandals-Summer-PU-Lining-Feature-Material-Origin-Type-Season-Place-Model-Height-Outsole.webp');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .zapatos:hover{
+        transform: scale(1.1);
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221004/pngtree-autumns-brown-leather-chelsea-boots-for-women-model-shoes-trendy-photo-image_49125238.jpg');
+    }
+    H3{
+        font-size: 30px;
+        font-family: Arial, sans-serif;
+        position: absolute;
+        color: black;
+        
+    }
+    p{
+        cursor: pointer;
+    }
+    
+    .cathombres{
+        width:100%;
+        height: 500px;
+        background-color: rgb(226, 240, 240);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        display: flex;
+        gap: 10px;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .jeanshombre{
+        width: 200px;
+        height: 300px; 
+        background-color: black;
+        background-image: url('https://i.pinimg.com/236x/74/7f/4c/747f4cdbf1c0b32cdde027d6ea4818c1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        animation-name: cambio1;
+        border-radius: 20px ;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    
+    
+
+    .zapatoshombre{
+        width: 300px;
+        height: 400px; 
+        background-color: black;
+        background-image: url('https://img.freepik.com/foto-gratis/retrato-hombre_1296-626.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 100px black;
+        animation-name: cambio2;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+
+ 
+
+    .gorrashombre{
+        width: 200px;
+        height: 300px; 
+        background-color: black;
+        background-image: url('https://st3.depositphotos.com/5665898/13376/i/450/depositphotos_133761294-stock-photo-the-young-man-in-a.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px black;
+        animation-name: cambio3;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+   
+    h5{
+        font-family: "Dancing Script", cursive;
+        font-size: 30px;
+        text-shadow: 0px 8px 15px black;
+    }
+
+    .catniños{
+        width:100%;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgb(0, 0, 0)),
+        url('https://www.m360.cl/noticias/site/artic/20170912/imag/foto_0000001020170912152558.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .niño{
+        background-image: url('https://i.pinimg.com/736x/5b/c9/eb/5bc9ebc439ead275493b56701c5495c2.jpg');
+        background-size: 100%;
+        width: 400px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniños;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niño:hover{
+        transform: scale(1.1);
+    }
+    
+
+  .niña{
+        background-image: url('https://img.freepik.com/fotos-premium/moda-nino-nina-ropa-elegante-pared-color-b_86390-1599.jpg?semt=ais_hybrid&w=740');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 300px;
+        background-color: black;
+        border-radius: 20px ;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+        animation-name: fotoniñas;
+        animation-duration: 30s;
+        animation-delay: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+    }
+    .niña:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .footer {
+    background-color: rgb(236, 228, 228);
+    color: black;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .footercontent h6 {
+    margin-bottom: 10px;
+    }
+
+    .footerlinks{
+    margin: 15px 0;
+    }
+
+    .footerredes {
+    margin: 15px 0;
+    }
+
+    .footerlinks a{
+    color: #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    .footerredes a {
+    color:  #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    .footerlinks a:hover{
+    color: #000000;
+    text-decoration: underline;
+    }
+    .footerredes a:hover {
+    color: #000000;
+    text-decoration: underline;
+    }
+
+    .footercopy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    }
+
+
+
+
+    }
+    
+    
+
+    
+</style>
+<body>
+    <nav>
+            <div class="logo">
+                <a href="paginaprincipal.html"><img src="logotipo2.png"></a>
+            </div>
+            <ul class="menu">
+                <li class="cat mujer" ><a  href="PAG_HOMBRES_ACT.html">Hombre</a></li>
+                <li>|</li>
+                <li class="cat hombre"  ><a href="mujer.html">Mujer</a></li>
+                <li>|</li>
+                <li class="cat niños"  ><a href="NIÑOS.html">Niños</a></li>
+            </ul>
+
+            <div class="iconos">
+                <li class="icono-perfil">
+                <i class="fa-solid fa-user"></i>
+                    <div class="login">
+                        <h5>LOGIN</h5>
+                        <input type="email" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit" class="entrar">Entrar</button>
+                    </div>
+                </li>
+                <li class="icono-lupa"><a href="#"><i class="fa-solid fa-magnifying-glass"></a></i></li>
+            </div>
+    </nav>
+    
+    <div id="parallax"><h1>GMLF</h1>
+    <p>GALERY  |  ABOUT ME  |  CONTACT ME</p></div>
+    <div class="catropa"> 
+        <div class="Titulo1">PARA MUJERES</div>
+        <div class="blusas">
+            <h3>BLUSAS</h3>
+        </div>
+        <div class="jeans">
+            <h3>JEANS</h3>
+        </div>
+        <div class="vestidos">
+            <h3>VESTIDOS</h3>
+        </div>
+        <div class="zapatos">
+           <H3>ZAPATOS</H3>
+        </div>
+    </div>
+
+    <div class="cathombres" >
+        <div class="Titulo2">PARA HOMBRES</div>
+        <div class="jeanshombre"></div>
+        <div class="zapatoshombre"></div>
+        <div class="gorrashombre"></div>
+        <h5>Explora la nueva colección 2025</h5>
+    </div>
+
+    <div class="catniños">
+        <div class="Titulo3">PARA NIÑOS</div>
+        <div class="niño"></div>
+        <div class="niña"></div>
+    </div>
+
+    <footer class="footer">
+  <div class="footercontent">
+    <h6>GMLF</h6>
+    <p>Ropa con estilo y calidad a nivel nacional</p>
+    <div class="footerlinks">
+      <a href="#">Inicio</a>
+      <a href="#">Tienda</a>
+      <a href="#">Contacto</a>
+      <a href="#">Política de privacidad</a>
+    </div>
+    <div class="footerredes">
+      <a href="https://www.facebook.com/login.php/">Facebook</a>
+      <a href="https://www.instagram.com/accounts/login/">Instagram</a>
+    </div>
+    <p class="footercopy">© 2025 GMLF. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>

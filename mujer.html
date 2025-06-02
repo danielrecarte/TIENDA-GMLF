@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMLF | Estilos Ropa para Mujer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logopestaña.jpg" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logopestaña.jpeg" type="image/png">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #CCCCCC;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    nav{
+        background-color:rgb(236, 228, 228) ;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0x 0x 800px #161515;
+       
+        top: 0px;   
+        z-index: 1;
+        font-family: "Montserrat";
+        color: black;
+    }
+    .menu{
+        display: flex;
+        gap: 20px;
+    }
+    .iconos{
+        display: flex;
+        gap: 15px;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block ;
+        margin-right: 20px;
+        font-size: 20px;
+        transition: all 0.2s ease;
+        padding: 10px 0px;
+        ;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    img{
+        width: 200px;
+        object-fit: cover; 
+      
+      
+    }
+    .logo{
+        float: left;
+        overflow: hidden;
+        
+    }
+    .cat{
+        font-size: 25px;
+        padding: 10px;
+        color: black;
+    }
+
+    .cat:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .icono-perfil{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+    .icono-lupa{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .icono-perfil:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .icono-perfil:hover .login {
+      display: block;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background:#EEEEEE;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px #333333;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #0e0c0c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #020202;
+      color: black;
+    }
+
+    .txt{
+        width:100%;
+        height: 90vh;
+        background-image: url('https://img.freepik.com/foto-gratis/estilo-mujer-vestido-flores-sobre-fondo-rosa_285396-3051.jpg');
+        background-position: center;
+        opacity: 0.55;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        filter: saturate(1) contrast(-2);
+        text-align: center;
+        text-shadow: 0px 0px 50px #f7f7f7;
+        z-index: -1;
+    }
+
+    .txt span{
+        animation: opensite 1.8s linear 1 normal forwards;
+        transform: scale(0.0);
+        width:80%;
+        height: auto;
+        opacity: 1;
+        color: rgb(13, 13, 14);
+        text-shadow: 0px 0px 50px rgb(194, 194, 197);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 45px;
+        padding: 20px;
+        border-radius: 10px;
+        background: white;
+        mix-blend-mode: hard-light;
+    }
+
+    @keyframes opensite {
+        0%{
+            transform: scale(0.0);
+        }
+        100%{
+            transform: scale(1.0);
+        }
+    }
+
+    .iconr{
+        cursor: pointer;
+    }
+
+    .inforopa{
+        display: none;
+    }
+    
+    .c1,.c2,.c3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #D6D6D6;
+        color: #050505;
+        font-weight: bolder;
+        font-size: 2.5vw;
+        border-radius: 10px;
+    }
+
+    .c1 a, .c2 a{
+        color: #0a0809;
+        text-decoration: none;
+    }
+    .c1{
+        grid-area: t1;
+    }
+    .c2{
+        grid-area: t2;
+    }
+
+    .c3{
+        grid-area: t3;
+    }
+    
+    .tops{
+        grid-area: c1;
+        background: #BFBFBF;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tops a{
+        color: #000000;
+        font-weight: bold;
+        font-size: 2vw;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .tops a:hover{
+        transform: scale(1.5);
+        text-shadow: 0px 0px 20px #eb79b202;
+    }
+
+    .bottoms{
+        grid-area: c2;
+        background: #BFBFBF;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .bottoms a{
+        color: #080808;
+        font-weight: bold;
+        font-size: 2vw;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .bottoms a:hover{
+        transform: scale(1.5);
+        text-shadow: 0px 0px 20px #080808;
+    }
+
+    .giftcard{
+        grid-area: c3;
+        background: #BFBFBF;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .giftcard img{
+        width: 45%;
+        border-radius: 100%;
+    }
+
+    .giftcard a{
+        color: #0f0d0e;
+        font-weight: bold;
+        font-size: 2vw;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .giftcard a:hover{
+        transform: scale(1.5);
+        text-shadow: 0px 0px 20px #080003;
+    }
+    
+
+    #check:checked + .inforopa{
+        padding: 20px;
+        display: block;
+        position: absolute;
+        left:0;
+        top: 100px;
+        width: 100%;
+        height: 80vh;
+        background: #CCCCCC;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 0.2fr 1fr;
+        grid-template-areas: 
+        "t1 t2 t3"
+        "c1 c2 c3";
+        gap: 10px 20px;
+    }
+
+
+    #check {
+      display: none;
+    }
+
+    /*articulo1 Necesita media screen*/
+
+    .article1{
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 1.4fr 1.3fr 2.3fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    .article1 .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #080607;
+    }
+
+    .article1 .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .article1 .title div:nth-child(2){
+        animation: movetext 5s linear infinite forwards normal;
+        transition: all ease 0.5s;
+    }
+
+    @keyframes movetext {
+        0%,100%{
+            transform: scale(1.0) translate(0px) rotate(0deg);
+            color:#0a0909;
+        }
+
+        25%{
+            transform: scale(1.5) translate(5vw) rotate(5deg);
+            color:#0a0808;
+        }
+
+        50%{
+            transform: scale(1.00) translate(0vw) rotate(0deg);
+            color:#46081e;
+        }
+
+        75%{
+            transform: scale(1.5) translate(-5vw) rotate(-5deg);
+            color:#0e0a0b;
+        }
+    }
+
+    .article1 .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article1 .images img:nth-child(1){
+        position: relative;
+        z-index: -9;
+        transform: rotate(-15deg);
+        box-shadow: 0px 0px 20px #0a0608;
+    }
+
+    .article1 .images img:nth-child(2){
+        position: relative;
+        z-index: -10;
+        transform: rotate(3deg);
+        box-shadow: 0px 0px 20px #070406;
+    }
+
+    /*necesita media screen*/
+
+     
+
+    
+
+    .article2{
+        margin-top: 180px;
+        text-align: center;
+    }
+
+    .article2 .title{
+        margin: 20px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .article2 .title div:nth-child(1){
+        font-size: 70px;
+        font-weight: bold;
+        animation: colorchange 7s linear infinite normal forwards;
+        transition: all 2s;
+    }
+
+    @keyframes colorchange {
+        0%,100%{
+            color:#0c0b0b;
+        }
+
+        15%,80%{
+            color: #a21144;
+        }
+
+        30%,65%{
+            color: #bf2259;
+        }
+
+        50%{
+            color: #e71f65;
+        }
+        
+    }
+
+    .article2 .title div:nth-child(2){
+        transform: translateY(-10px);
+        color:#0e0c0c;
+        font-weight: bolder;
+        width: 90%;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: #430d1d 5px double;
+    }
+
+    .images{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        gap: 20px;
+        padding: 0px 40px;
+    }
+
+    .article2 .images div{
+        background-color: #B3B3B3;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 1s ease;
+    }
+
+    .article2 .images * img{
+        width: 50%;
+        height: 70%;
+        margin-bottom: 20px;
+    }
+
+    .article2 .images * div:nth-child(1){
+        font-weight: bold;
+        padding: 10px;
+        background-color: #A6A6A6;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .article2 .images * div:nth-child(2){
+        margin: 200px;
+    }
+
+    .article2 .images div:hover{
+        transform: scale(1.05);
+        background-color: #A6A6A6;
+    }
+
+    .article3{
+        width:100%;
+        margin: 80px 0px 0px 0px;
+        font-size: 15px;
+        color:rgba(19, 1, 1, 0.795);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+    .article3 .title{
+        color:#f1f1f1;
+        font-size: 50px;
+        padding: 20px;
+        background: #808080;
+        border-radius: 10px;
+        position: relative;
+        z-index: -2;
+    }
+
+    .article3 .details{
+        background-color: #A6A6A6;
+        padding: 30px 5px 30px 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translateY(-20px);
+        position: relative;
+        z-index: -3;
+    }
+
+    .article3 .details *{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .article3 .details .d1 div:nth-child(1),.d2 div:nth-child(1),.d3 div:nth-child(1){
+        font-size: 50px;
+        margin: 30px 0px;
+        transition: all ease 0.4s;
+    }
+
+    .article3 .details .d1 div:nth-child(2),.d2 div:nth-child(2),.d3 div:nth-child(2){
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    footer{
+        width: 100%;
+        background: #210810;
+        color: whitesmoke;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        grid-template-areas: 
+        "f1 f1"
+        "f2 f3";
+    }
+
+    .f1{
+        padding: 30px;
+        grid-area: f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        opacity: 0.7;
+    }
+
+    .f2{
+        grid-area: f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        font-weight: bold;
+        padding: 30px;
+    }
+
+    .f3{
+        grid-area: f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+        padding: 30px;
+    }
+
+    .f3 div{
+        padding: 20px;
+    }
+
+    .topsimage{
+        margin: 150px 0px 50px 0px;
+        width:100%;
+        height: 70vh;
+        background-image: url('https://img.freepik.com/fotos-premium/retrato-cuerpo-entero-tres-jovenes-mujeres-multietnicas-abrazandose-posando-sobre-fondo-rosa_116547-57983.jpg');
+        background-position: center;
+        opacity: 0.55;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        filter: saturate(1) contrast(-2);
+        text-align: center;
+        text-shadow: 0px 0px 50px #1F2F46;
+        z-index: -1;
+        box-shadow:0px 0px 500px #fde1eb;
+    }
+
+    .topsimage div{
+        background: whitesmoke;
+        mix-blend-mode: hard-light;
+        padding: 50px;
+        border-radius: 10px;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:#210810;
+        box-shadow: 0px 0px 4500px #bba4ac;
+        transition: all ease 1s;
+    }
+
+    .topsimage div:hover{
+        transform: scale(1.5);
+    }
+
+    .bottomsimage{
+        margin: 150px 0px 50px 0px;
+        width:100%;
+        height: 70vh;
+        background-image: url('https://media.istockphoto.com/id/1294322221/es/foto/hermosa-mujer-en-el-estudio.jpg?s=612x612&w=0&k=20&c=36KCP4NrcrWmbWttaYNNNSCTnmCqvj0l-DQp6ydwzpU=');
+        background-position: center;
+        opacity: 0.55;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        filter: saturate(1) contrast(-2);
+        text-align: center;
+        text-shadow: 0px 0px 50px #1F2F46;
+        z-index: -1;
+        box-shadow:0px 0px 500px #ae174c;
+    }
+
+    .bottomsimage div{
+        background: whitesmoke;
+        mix-blend-mode: hard-light;
+        padding: 50px;
+        border-radius: 10px;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:#210810;
+        box-shadow: 0px 0px 4500px #821135;
+        transition: all ease 1s;
+    }
+
+    .bottomsimage div:hover{
+        transform: scale(1.5);
+    }
+
+    .txt2{
+        width:100%;
+        height: 85vh;
+        background-image: url('https://img.freepik.com/foto-gratis/hermosa-confiada-joven-rubia-20-anos-elegante-vestido-blanco-lindo-tocando-cabello-sonriendo-satisfecha-vistiendose-concepto-cita-romantica-mujeres-fondo-rosa-belleza_1258-92873.jpg?semt=ais_hybrid&w=740');
+        background-position: center;
+        opacity: 0.55;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        filter: saturate(1) contrast(-2);
+        text-align: center;
+        text-shadow: 0px 0px 50px #1F2F46;
+        box-shadow: 0px 0px 500px #161213;
+        z-index: -1;
+        margin: 200px 0px;
+    }
+
+    
+    .txt2 .txtcontentgrid{
+        width: 90%;
+        height: 85%;
+        opacity: 1;
+        color: rgb(56, 2, 67);
+        text-shadow: 0px 0px 50px rgb(30, 21, 75);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 45px;
+        padding: 20px;
+        background: white;
+        mix-blend-mode: hard-light;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2.5fr;
+        gap:10px;
+        grid-template-areas: 
+        "r1"
+        "r2" ;
+    }  
+
+    .txtcontentgrid .row1{
+        grid-area: r1;
+    }
+
+    .txtcontentgrid .row2{
+        grid-area: r2;
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-rows: 1fr;
+        padding: 20px;
+        gap:10px;
+        font-size: 10px;
+    }
+
+    .row2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row2 .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .row2 .image img{
+        width: 100%;
+        animation: cardflip 3s linear infinite normal forwards;
+    }
+
+    @keyframes cardflip {
+        0%,50%,100%{
+            transform: rotate(0deg);
+        }
+
+        25%{
+            transform: rotate(8deg);
+        }
+
+        75%{
+            transform: rotate(-8deg);
+        }
+    }
+
+    .txtcontentgrid .row2 .content .con1{
+        width: 90%;
+        padding: 10px;
+        margin: 40px;
+        background-color: #000000;
+    }
+
+    .txtcontentgrid .row2 .content .con1 input, .con3 input{
+        width:100%;
+        padding: 20px;
+    }
+
+    .txtcontentgrid .row2 .content .con2{
+        width:90%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vw;
+        margin-bottom: 20px;
+        color: #0c0b0b;
+    }
+
+     .footer {
+    background-color: rgb(236, 228, 228);
+    color: black;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .footercontent h6 {
+    margin-bottom: 10px;
+    }
+
+    .footerlinks{
+    margin: 15px 0;
+    }
+
+    .footerredes {
+    margin: 15px 0;
+    }
+
+    .footerlinks a{
+    color: #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    .footerredes a {
+    color:  #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    .footerlinks a:hover{
+    color: #000000;
+    text-decoration: underline;
+    }
+    .footerredes a:hover {
+    color: #000000;
+    text-decoration: underline;
+    }
+
+    .footercopy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    }
+
+
+
+
+    @media (min-width: 769px) and (max-width: 1024px){
+        nav {
+            padding: 20px;
+        
+        }
+
+        img {
+            width: 150px;
+            object-fit: cover; 
+        }
+
+        .li{
+           
+            padding: 10px 5px;
+        }
+
+        .logo {
+            padding-left: 5px;
+        }
+        .cat{
+            font-size: 20px;
+        }
+        
+
+    
+
+        .cat:active {
+            transform: scale(1.1);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login .entrar:active {
+            background-color: #008d1f;
+            color: black;
+        }
+
+        #check:checked + .inforopa{
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "t1 c1 c1"
+            "t2 c2 c2"
+            "t3 c3 c3";
+            top:80px;
+        }
+
+        .c1,.c2,.c3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background: #0c090a;
+            color: #4e4347;
+            font-weight: bolder;
+            font-size: 2.5vw;
+            border-radius: 10px;
+            
+        }
+
+        .tops{
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .tops a{
+            font-size: 3vw;
+        }
+
+        .bottoms{
+            flex-direction: row;
+        }
+
+        .bottoms a{
+            font-size: 3vw;
+        }
+
+        .bottoms a:hover{
+            transform: scale(1.5);
+            text-shadow: 0px 0px 20px #0f0f0f;
+        }
+
+        .giftcard{
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .giftcard img{
+            width:25%;
+            margin: 10px;
+            border-radius: 100%;
+        }
+
+        .giftcard a{
+            font-size: 3vw;
+        }
+
+        .article1{
+            height: 50vh;
+            width:70vw;
+            grid-template-columns: 90vw;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "a1"
+            "a2"
+            "a3";
+            margin: 80px 0px 290px 0px;
+        }
+
+        .article1 .title{
+            grid-area: a1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:20px;
+            font-weight: bold;
+            font-size: 25px;
+            color: #0c0b0c;
+        }
+
+        .article1 .content{
+            grid-area: a2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+
+        .article1 .images{
+            grid-area: a3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article1 .images img:nth-child(1){
+            position: relative;
+            z-index: -9;
+            transform: scale(1) rotate(-15deg);
+            box-shadow: 0px 0px 20px #0f0a0c;
+        }
+
+        .article1 .images img:nth-child(2){
+            position: relative;
+            z-index: -10;
+            transform: scale(1) rotate(3deg);
+            box-shadow: 0px 0px 20px #11030d;
+        }      
+
+        .article2{
+            margin-top: 380px;
+            text-align: center;
+        }
+
+        .images{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .article3 .title{
+            font-size: 30px;
+        }
+
+        .article3 .details *{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .article3 .details .d1 div:nth-child(1),.d2 div:nth-child(1),.d3 div:nth-child(1){
+            font-size: 30px;
+            margin: 30px 0px;
+        }
+
+        .article3 .details .d1 div:nth-child(2),.d2 div:nth-child(2),.d3 div:nth-child(2){
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .article3 .details .d1 div:nth-child(3),.d2 div:nth-child(3),.d3 div:nth-child(3){
+            font-size: 10px;
+            text-align: center;
+        }
+
+        footer{
+            width: 100%;
+            background: #210810;
+            color: whitesmoke;
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 0.3fr 1fr;
+            grid-template-areas: 
+            "f2 f2"
+            "f3 f3"
+            "f1 f1";
+        }
+
+        .f1{
+            padding: 30px;
+            grid-area: f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            opacity: 0.7;
+        }
+
+        .f2{
+            grid-area: f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 30px;
+        }
+
+        .f3{
+            grid-area: f3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            font-size: 10px;
+        }
+
+        .f3 div{
+            padding: 10px;
+        }
+
+        
+    }
+
+    @media screen and (min-width:400px) and (max-width:768px) {
+        nav {
+            
+            flex-direction: column;
+            padding: 15px;
+        
+        }
+
+        .menu {
+            width: auto;
+            
+        }
+
+        .menu li {
+           
+            margin-right: 10px;
+            padding: 5px 2px;
+        }
+        .cat{
+            font-size: 20px;
+        }
+
+        
+
+       
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+        .login{
+            left: 5px;
+        }
+
+        #check:checked + .inforopa{
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "t1 c1 c1"
+            "t2 c2 c2"
+            "t3 c3 c3";
+            top:50px;
+        }
+
+        .c1,.c2,.c3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background: #ff8ab3;
+            color: #46081e;
+            font-weight: bolder;
+            font-size: 2.5vw;
+            border-radius: 10px;
+            
+        }
+
+        .tops{
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .tops a{
+            font-size: 3vw;
+        }
+
+        .bottoms{
+            flex-direction: row;
+        }
+
+        .bottoms a{
+            font-size: 3vw;
+        }
+
+        .bottoms a:hover{
+            transform: scale(1.5);
+            text-shadow: 0px 0px 20px #140d0f;
+        }
+
+        .giftcard{
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .giftcard img{
+            width:25%;
+            margin: 10px;
+            border-radius: 100%;
+        }
+
+        .giftcard a{
+            font-size: 3vw;
+        }
+
+        .article1{
+            height: 50vh;
+            width:70vw;
+            grid-template-columns: 90vw;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "a1"
+            "a2"
+            "a3";
+            margin: 80px 0px 290px 0px;
+        }
+
+        .article1 .title{
+            grid-area: a1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:20px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #46081e;
+        }
+
+        .article1 .content{
+            grid-area: a2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+
+        .article1 .images{
+            grid-area: a3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article1 .images img:nth-child(1){
+            position: relative;
+            z-index: -9;
+            transform: scale(0.6) rotate(-15deg) translateX(85px);
+            box-shadow: 0px 0px 20px #46081e;
+        }
+
+        .article1 .images img:nth-child(2){
+            position: relative;
+            z-index: -10;
+            transform: scale(0.6) rotate(3deg) translateX(-85px);
+            box-shadow: 0px 0px 20px #b7298f;
+        }      
+
+        .article2{
+            margin-top: 380px;
+            text-align: center;
+        }
+
+        .images{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .article3 .title{
+            font-size: 30px;
+        }
+
+        .article3 .details *{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .article3 .details .d1 div:nth-child(1),.d2 div:nth-child(1),.d3 div:nth-child(1){
+            font-size: 30px;
+            margin: 30px 0px;
+        }
+
+        .article3 .details .d1 div:nth-child(2),.d2 div:nth-child(2),.d3 div:nth-child(2){
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .article3 .details .d1 div:nth-child(3),.d2 div:nth-child(3),.d3 div:nth-child(3){
+            font-size: 10px;
+            text-align: center;
+        }
+
+        footer{
+            width: 100%;
+            background: #210810;
+            color: whitesmoke;
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 0.3fr 1fr;
+            grid-template-areas: 
+            "f2 f2"
+            "f3 f3"
+            "f1 f1";
+        }
+
+        .f1{
+            padding: 30px;
+            grid-area: f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            opacity: 0.7;
+        }
+
+        .f2{
+            grid-area: f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 30px;
+        }
+
+        .f3{
+            grid-area: f3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            font-size: 10px;
+        }
+
+        .f3 div{
+            padding: 10px;
+        }
+
+        .topsimage div{
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 25px;
+            transition: all ease 1s;
+        }
+
+        .topsimage div:hover{
+            transform: scale(1.5);
+        }
+
+        .bottomsimage div{
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 25px;
+            transition: all ease 1s;
+        }
+
+        .bottomsimage div:hover{
+            transform: scale(1.5);
+        }
+
+        .txt2{
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+
+        
+        .txt2 .txtcontentgrid{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr  3.5fr;
+            grid-template-areas: 
+            "r1"
+            "r2" ;
+        }  
+
+        .txtcontentgrid .row1{
+            grid-area: r1;
+            font-size: 20px;
+        }
+
+
+        .txtcontentgrid .row2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+        }
+
+        .txtcontentgrid .row2 .image{
+            width: 30%;
+        }
+
+        .txtcontentgrid .row2 .image img{
+            width: 100%;
+        }
+
+        .txtcontentgrid .row2 .content .con1 input,.con3 input{
+            padding:5px;
+            margin: 0;
+        }
+
+        .txtcontentgrid .row2 .content .con2{
+            margin: 0px 0px 10px 0px;
+        }
+
+    }
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logotipo2.png"></a>
+        </div>
+
+        <div>
+            <ul class="menu">
+                <li class="cat mujer" ><a  href="PAG_HOMBRES_ACT.html">Hombre</a></li>
+                <li>|</li>
+                <li class="cat hombre"  ><a href="mujer.html">Mujer</a></li>
+                <li>|</li>
+                <li class="cat niños"  ><a href="NIÑOS.html">Niños</a></li>
+            </ul>
+        </div>
+        <div class="iconos">
+            <li class="iconoropa">
+
+                <label for="check" class="iconr"><i class="fa-solid fa-shirt"></i></label>
+                <input type="checkbox" id="check">
+
+                <div class="inforopa">
+
+                    <div class="c1"><a href="#TOPS">TOPS</a></div>
+                    <div class="tops">
+                        <a href="#CAMISAS">Camisas</a>
+                        <a href="#BLUSAS">Blusas</a>
+                        <a href="#CHAQUETAS">Chaquetas</a>
+                    </div>
+
+                    <div class="c2"><a href="#BOTTOMS">BOTTOMS</a></div>
+                    <div class="bottoms">
+                        <a href="#PANTALONES">Pantalones</a>
+                        <a href="#FALDAS">Faldas</a>
+                        <a href="#ZAPATOS">Zapatos</a>
+                    </div>
+
+                    <div class="c3">REDEEM GIFTCARDS</div>
+                    <div class="giftcard">
+                        <img src="https://thedropstore.com/cdn/shop/products/GIFT_CARD_600.jpg?v=1582014610">
+                        <a href="#REDEEM">Redeem Code</a>
+                    </div>
+
+                </div>
+
+            </li>
+
+            <li class="icono-perfil">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div class="login">
+                    <h5>LOGIN</h5>
+                    <input type="email" placeholder="Usuario" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                </div>
+
+            </li>
+            
+            <li class="icono-lupa"><a href="#"><i class="fa-solid fa-magnifying-glass"></a></i></li>
+        </div>
+    </nav>
+
+    <div class="txt"><span>Moda Y Estilo Femenino</span></div>
+
+    <main>
+        <div class="article1">
+            <div class="title">
+                <div>Creando</div>
+                <div>Arte</div> 
+                <div>Que Puedes Portar</div>
+            </div>
+            <div class="content">
+                Cada prenda que creamos es más que ropa: es una obra de arte que puedes llevar contigo.
+                Inspirados por el color, la cultura y la expresión individual, fusionamos creatividad con diseño textil para ofrecer piezas únicas que cuentan una historia.
+                Vestir no es solo cubrirse, es mostrar al mundo quién eres.
+            </div>
+            <div class="images">
+                <img src="https://hn.distefanoshop.com/cdn/shop/products/DRO1767.jpg?v=1670967313&width=535">
+                <img src="https://hn.distefanoshop.com/cdn/shop/files/DRO8572.jpg?v=1715702864&width=535">
+            </div>
+        </div>
+
+        <div class="article2">
+            <div class="title">
+                <div>Tendencias</div><div>De La Semana</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div>Vestido Mujer Verano Mujer Moda Sin Mangas</div>
+                    <img src="https://i5.walmartimages.com/asr/e91bf01f-b7e5-4488-8f4d-477d4caa9128.d86f408718aa34188df14169514fb3cf.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+                    <div>L. 1600.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>Cargo Jeans Mujer Azul claro</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/Jeans-Azules-con-Bolsillos-Cargo.jpg?v=1742310946&width=360">
+                    <div>L. 700.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Falda midi unicolor para mujer</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/02/falda-midi-unicolor-para-mujer-derek-negro-835056NG_B.webp_stCFjq95KWu0yTqBsUzirOTxS2I92x.webp">
+                    <div>L. 3550.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Chaqueta acolchada unicolor</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/03/chaqueta-acolchada-unicolor-derek-negro-831061NG.webp_Zg0PSLTwpQk69aW2ZnkWMxco5BWJg3.webp">
+                    <div>L. 4150.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Blusa camisera manga corta para mujer</div>
+                    <img src="https://ss525.liverpool.com.mx/xl/1159588668.jpg">
+                    <div>L. 1049.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Camisa manga corta cuello bobo</div>
+                    <img src="https://static.bershka.net/assets/public/9ca5/a3e1/6758448ba814/abbec56bce1d/01161692250-p/01161692250-p.jpg?ts=1741856002475&w=800">
+                    <div>L. 500.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomsimage" id="BOTTOMS">
+            <div>BOTTOMS Para Mujer</div>
+        </div>
+
+
+        <div class="article2" ID="PANTALONES">
+            <div class="title">
+                <div>Pantalones</div><div>Tenemos De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div>Skinny Jeans Azul Noche para Mujer</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/Vianey_Skinny_AzulMarinoOscuro_Mujer.jpg?v=1728760642&width=533">
+                    <div>L. 600.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>Pantalones cargo café para Mujer</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/pdmx-mujer-pantalon-cargo-marron-oscuro.jpg?v=1730409428&width=360">
+                    <div>L. 560.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Cargo Jeans Mujer Azul claro</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/Jeans-Azules-con-Bolsillos-Cargo.jpg?v=1742310946&width=360">
+                    <div>L. L699.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Pantalones cargo Beige para mujer (Stretch y Estilo Mom)</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/cargo-pantalones-beige-detras.jpg?v=1724789469&width=360">
+                    <div>L. 380.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Pantalones Campana Negros Esenciales de Tiro Alto</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/Jeans-Campana-Negros-Esenciales-de-Tiro-Alto-3.jpg?v=1712869763&width=360">
+                    <div>L. 660.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Jeans campanada Azul Profundo de Tiro Alto</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/Jeans-Campana-Azul-Cielo-de-Tiro-Alto-6.jpg?v=1745769953">
+                    <div>L. 499.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Pantalones deportivos ajustados para mujer con bolsillos con cierre</div>
+                    <img src="https://m.media-amazon.com/images/I/71cjKynIOHL._AC_SY550_.jpg">
+                    <div>L. 550.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>Pantalón cargo de Mujer Azul Oscuro con Bolsillos</div>
+                    <img src="https://pantalonesdemezclilla.mx/cdn/shop/files/regulares-jeans-cargo-azules-mujer_4_b3f5568b-6613-451f-b68b-ee328c527788.jpg?v=1716993754&width=360">
+                    <div>L. 700.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Pantalón 0Recto Polyester Elástico Negro</div>
+                    <img src="https://kautivate.cl/wp-content/uploads/2023/09/Pantalon-Mujer-Formal-Negro-1-4.jpg">
+                    <div>L. 680.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>Pantalón de Mujer unicolor</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/08/pantalon-de-mujer-unicolor-cargo-derek-cafe-823234CF_A.webp_9uDwJ0joRmULzFBriqiKo10tybqnTB.webp">
+                    <div>L. 850.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article2" ID="FALDAS">
+            <div class="title">
+                <div>Faldas</div><div>Tenemos De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div>Sayas Cortas Azul de Moda Mini Faldas Elegantes Formales Informales para Mujeres</div>
+                    <img src="https://i.ebayimg.com/images/g/daoAAOSwBiRkIa2e/s-l1600.webp">
+                    <div>L. 450.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>Falda para mujer rita Derek</div>
+                    <img src="https://cdn.baguer.co/uploads/2023/11/falda-para-mujer-rita-derek-blanco-827414BL.jpg_SbCtOrWsFsxEjVLTxmVioihIuFsjaKDHsnlEmPJdx32wPQqdCt.jpg">
+                    <div>L. 670.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Falda midi para mujer</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/05/falda-midi-para-mujer-stella-derek-blanco-834932BL.webp_9UxXWUXyIV6x5Du2VEoQ11Fc0brVUh.webp">
+                    <div>L. 4,500.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Falda midi unicolor para mujer</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/02/falda-midi-unicolor-para-mujer-derek-negro-835056NG_B.webp_stCFjq95KWu0yTqBsUzirOTxS2I92x.webp">
+                    <div>L. 3,550.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Falda para mujer alahia</div>
+                    <img src="https://cdn.baguer.co/uploads/2024/12/falda-para-mujer-alahia-derek-lovely-azul-834091AZ.jpg_TlpELmTzlyPw3WWRiXS3RIX7L1BE7E4JypeDQ0lBhBQC7yFrrW.jpg">
+                    <div>L. 1,200.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Falda Juvenil Mujer Stfashion Rojo</div>
+                    <img src="https://resources.claroshop.com/medios-plazavip/s2/10703/3668728/624f1be32de82-a5c168c7-dc52-4ceb-8273-63f6e4f0fd49-1600x1600.jpg?scale=500&qlty=75">
+                    <div>L. 999.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Falda mujer denim larga con abertura en centro delantero</div>
+                    <img src="https://cdn.baguer.co/uploads/2023/12/falda-mujer-denim-larga-con-abertura-en-centro-delantero-azul-824928AZ.jpg_eaExKnBjbomHFmGkIq6CTFBRTGp8E9m63JYBCbPXdvGwAK8d9w.jpg">
+                    <div>L. 2,300.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>Falda para mujer estampada</div>
+                    <img src="https://cdn.baguer.co/uploads/2024/10/falda-para-mujer-estampada-derek-lovely-azul-835023AZ.jpg_6wSlqULGfGj3A7h72P7voJLVBUXyvyHXPCuXTPKg3Wyx7M9tUi.jpg">
+                    <div>L. 2,337.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Faldas Elegantes Formales Informales Ropa para Mujer</div>
+                    <img src="https://i.ebayimg.com/images/g/gB4AAOSwiXVlBP7y/s-l1600.webp">
+                    <div>L. 2,600.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>Falda larga estampada</div>
+                    <img src="https://stopjeans.vtexassets.com/arquivos/ids/222876-1600-auto?v=638790259394700000&width=1600&height=auto&aspect=true">
+                    <div>L. 3,730.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article2" id="ZAPATOS" >
+            <div class="title">
+                <div>Zapatos</div><div>Tenemos De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div>Zapatos deportivos de plataforma para mujer</div>
+                    <img src="https://m.media-amazon.com/images/I/71ZXtMMmvdL._AC_SY535_.jpg">
+                    <div>L. 499.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>TP330 TENIS BLANCO CON NEGRO</div>
+                    <img src="https://cocoa-store.com/wp-content/uploads/2022/09/GAMUZA.jpg">
+                    <div>L. 3000.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Zapatillas de Plataforma Gruesa para Mujer con Detalles de Lentejuelas Doradas</div>
+                    <img src="https://img.kwcdn.com/product/open/2023-02-03/1675399921115-b86b18e65ee94ae6abaff7e2b9543a3a-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                    <div>L. 1200.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Tenis Nike Deportivos Para Mujer</div>
+                    <img src="https://i0.wp.com/galaxystore.com.co/wp-content/uploads/2023/05/Tenis-Nike-Gris-De-Mujer-.jpg">
+                    <div>L. 1536.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Zapatos Burdeos Destalonados de aguja  </div>
+                    <img src="https://images.asos-media.com/products/zapatos-burdeos-destalonados-de-tacon-de-aguja-con-detalles-efecto-piel-de-serpiente-samber-de-asos-design/206535003-1-snakeburgundymix?$n_750w$&wid=750&fit=constrain ">
+                    <div>L. 855.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Zapatos de tacón bajo con estampado de leopardo y correa </div>
+                    <img src="https://images.asos-media.com/products/zapatos-de-tacon-bajo-con-estampado-de-leopardo-y-correa-talonera-stroll-de-asos-design/206242493-1-leopard?$n_750w$&wid=750&fit=constrain ">
+                    <div>L. 1100.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Zapatos planos con decoración de metal para mujer, antideslizantes de suela blanda, para caminar</div>
+                    <img src=" https://i5.walmartimages.com/asr/a04b724e-6200-48cd-8ce1-2d57fc71c5b2.03901686b052078656d97912d8dfec60.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+                    <div>L. 1499.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>ZAPATO TACO ALTO EN COLOR NEGRO FIESTA MUJER </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVEN2legADHeOhWHIzd5KmKxhtZ6duhKw5WA&s">
+                    <div>L. 999.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Zapatos Mujer taco Weide GH137 </div>
+                    <img src="https://weide.cl/cdn/shop/files/GH137-BEIGE-_8.webp?v=1747996577&width=1100">
+                    <div>L. 1800.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>zapatos de vestir de verano para mujer, sandalias elegantes con plataforma y punta abierta</div>
+                    <img src="https://m.media-amazon.com/images/I/61Ctxnu-mKL._AC_SX679_.jpg">
+                    <div>L. 2,100.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="topsimage" id="TOPS">
+            <div>TOPS Para Mujer</div>
+        </div>
+
+        <div class="article2" id="BLUSAS">
+            <div class="title">
+                <div>Blusas</div><div>Tenemos De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div> BKEPDY Blusa de Mujer Elegante</div>
+                    <img src="https://i.pinimg.com/736x/ba/fb/78/bafb784f39ed816c18b072de5516e5f4.jpg">
+                    <div>L. 1600.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>BKEPDY Blusa de Mujer Elegantes Camisa de Manga Larga </div>
+                    <img src="https://m.media-amazon.com/images/I/718yehQvKzL._AC_SX679_.jpg">
+                    <div>L. 3200.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Blusa de Mujer suelta con cintura, manga larga, kimono</div>
+                    <img src="https://i5.walmartimages.com/asr/5af3cfeb-eda3-4785-a344-8b656ce1a4c1.2d8eaa1ac0ff4e6d4f8b354f5b0a9884.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+                    <div>L. L619.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Blusa de punto de crepé con cuello de polo – negro</div>
+                    <img src="https://static.kiabi.es/images/blusa-de-punto-de-crepe-con-cuello-de-polo-negro-dph47_2_hd1.jpg?width=800">
+                    <div>L. 2280.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Blusa Camisera con Escote en V</div>
+                    <img src="https://www.ostu.com/dw/image/v2/BHFM_PRD/on/demandware.static/-/Sites-storefront_catalog_ostu/default/dw706f8941/images/hi-res/Todo/blusas-de-moda-40120806-10215_1.jpg?sw=700&sh=700">
+                    <div>L. 660.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Blusa de mezcla de lino premamá – Blanco</div>
+                    <img src="https://static.kiabi.es/images/blusa-de-mezcla-de-lino-premama-blanco-dds56_1_hd1.jpg?width=800">
+                    <div>L. 2899.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Blusa en Efecto Rústico</div>
+                    <img src="https://www.patprimo.com/dw/image/v2/BHFM_PRD/on/demandware.static/-/Sites-storefront_catalog_pat/default/dw3d2fd010/images/hi-res/modelo/Blusas-De-Mujer-30123482-60568_1.jpg?sw=800&sh=960">
+                    <div>L. 2050.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>Blusa De Tiras Con Escote Redondo Drapeado</div>
+                    <img src="https://www.patprimo.com/dw/image/v2/BHFM_PRD/on/demandware.static/-/Sites-storefront_catalog_pat/default/dwe7eaa90a/images/hi-res/modelo/Blusas-De-Mujer-30123529-10020_1.jpg?sw=800&sh=960">
+                    <div>L. 700.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Blusa camisera manga corta para mujer</div>
+                    <img src="https://ss525.liverpool.com.mx/xl/1159588668.jpg">
+                    <div>L. 1050.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>Blusa de gasa con escote en V para mujer</div>
+                    <img src="https://i5.walmartimages.com/asr/cd6cb877-2283-48c3-ba81-6e989732405f.748475a6c1626906f6ac7ac58d8db1b9.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+                    <div>L. 950.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article2" id="CAMISAS">
+            <div class="title">
+                <div>Camisas</div><div>Camisas De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div>Camisa Denim Manga ¾ Mujer</div>
+                    <img src="https://www.pacer.hn/media/catalogue/5-mcdm004azuloscuro.jpg">
+                    <div>L. 600.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>Camisa Denim con Bolsillo</div>
+                    <img src="https://www.pacer.hn/media/catalogue/4-mcdm002azulclaro.jpg">
+                    <div>L. 400.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>IBAOTORONI Camisa de manga larga con botones para mujer: blusa casual de gasa con cuello de manga larga</div>
+                    <img src="https://m.media-amazon.com/images/I/51TkJzrkBPL._AC_SY500_.jpg">
+                    <div>L. 580.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Camisa de manga larga Oversized para Mujer</div>
+                    <img src="https://oldnavymx.vtexassets.com/arquivos/ids/218602-800-1067?v=638826681058400000&width=800&height=1067&aspect=true">
+                    <div>L. 380.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Camisa corta con botones y adornos para mujer </div>
+                    <img src="https://oldnavymx.vtexassets.com/arquivos/ids/493891-1536-2048?v=638660065317700000&width=1536&height=2048&aspect=true">
+                    <div>L. 660.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Camisa de rayas manga corta para mujer</div>
+                    <img src="https://oldnavymx.vtexassets.com/arquivos/ids/500902-1536-2048?v=638721330192700000&width=1536&height=2048&aspect=true">
+                    <div>L. 499.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Camisa manga corta cuello bobo</div>
+                    <img src="https://static.bershka.net/assets/public/9ca5/a3e1/6758448ba814/abbec56bce1d/01161692250-p/01161692250-p.jpg?ts=1741856002475&w=800">
+                    <div>L. 550.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>Camisa entallada manga campana</div>
+                    <img src="https://static.bershka.net/assets/public/fae7/6f23/75d646dcab9e/2d03f46ea3d3/06271743700-a3o/06271743700-a3o.jpg?ts=1735570217759&w=800">
+                    <div>L. 700.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Camisas de manga corta con botones para mujer</div>
+                    <img src="https://m.media-amazon.com/images/I/811H58x69uL._AC_SY550_.jpg">
+                    <div>L. 680.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>Blusa de trabajo con cuello y manga corta para mujer</div>
+                    <img src="https://m.media-amazon.com/images/I/81lj5g3AYQL._AC_SY550_.jpg">
+                    <div>L. 850.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article2" id="CHAQUETAS">
+            <div class="title">
+                <div>Chaquetas</div><div>Tenemos De Multiples Colores Y Tamaños</div>
+            </div>
+
+            <div class="images">
+                <div class="i1">
+                    <div> Stoked Mara Mujer Celeste</div>
+                    <img src="https://www.surprice.cl/media/catalog/product/j/a/jastw24-w02_st073_3_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1080&width=928&canvas=928:1080">
+                    <div>L. 1200.00</div>
+                </div>
+
+                <div class="i2">
+                    <div>Chaqueta acolchada unicolor</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/03/chaqueta-acolchada-unicolor-derek-beige-831061BG.webp_S6fKQqT6LkvVxSFjPfm7dfgdq0cwUU.webp">
+                    <div>L. 3750.00</div>
+                </div>
+
+                <div class="i3">
+                    <div>Chaqueta para mujer en polipiel</div>
+                    <img src="https://cdn.baguer.co/uploads/2023/02/chaqueta-para-mujer-en-polipiel-derek-arena-827695AR.jpg_d77YAVt8bfymz0TmRB65N7N6G7eXkgZ3nfyflVZtZnSPookOGj.jpg">
+                    <div>L. 685.00</div>
+                </div>
+
+                <div class="i4">
+                    <div>Chaqueta manga larga con cuello solapa estilo americano</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/02/chaqueta-manga-larga-con-cuello-solapa-estilo-americano-derek-gris-834189GR.webp_u63PSJ1XqT5iWGiYxqxevTmlowOEAA.webp">
+                    <div>L. 3820.00</div>
+                </div>
+
+                <div class="i5">
+                    <div>Chaqueta acolchada unicolor</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/03/chaqueta-acolchada-unicolor-derek-negro-831061NG.webp_Zg0PSLTwpQk69aW2ZnkWMxco5BWJg3.webp">
+                    <div>L. 5300.00</div>
+                </div>
+
+                <div class="i6">
+                    <div>Chaqueta para mujer en polipiel</div>
+                    <img src="https://cdn.baguer.co/uploads/2025/02/chaqueta-para-mujer-en-polipiel-derek-negro-828223NG.webp_klWnLBzRRpfGc7DhqKVjFt4aB9iiHu.webp">
+                    <div>L. 2250.00</div>
+                </div>
+
+                <div class="i7">
+                    <div>Chaqueta unicolor cuello solapa</div>
+                    <img src="https://cdn.baguer.co/uploads/2024/12/chaqueta-unicolor-cuello-solapa-derek-caqui-834194KQ.jpg_3njrAKqSxfhrLjehXee3xVWOaSq7J7kIpRhS8lgcunlIJI9sKL.jpg">
+                    <div>L. 5800.00</div>
+                </div>
+
+                <div class="i8">
+                    <div>Chaqueta abertura en mangas unicolor Derek</div>
+                    <img src="https://cdn.baguer.co/uploads/2024/12/chaqueta-abertura-en-mangas-unicolor-derek-rojo-833955RJ.jpg_myU6XCwu1GhoXdShCyocQFysKwLj0TiSf2NXsZu0fjVXRywxf8.jpg">
+                    <div>L. 6540.00</div>
+                </div>
+
+                <div class="i9">
+                    <div>Chaqueta para mujer denim con apliques brillantes</div>
+                    <img src="https://cdn.baguer.co/uploads/2024/06/chaqueta-para-mujer-denim-con-apliques-brillantes-adriana-derek-azul-828232AZ.jpg_ZjG98bczokxBVNDuglZfzgaZI4LLdOA8CvKlgNYkd83Q7M19eY.jpg">
+                    <div>L. 620.00</div>
+                </div>
+
+                <div class="i10">
+                    <div>Chaqueta de pluma Aconcagua</div>
+                    <img src="https://www.thenorthface.cl/media/catalog/product/n/f/nf0a84iu_nf1ni_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1080&width=928&canvas=928:1080">
+                    <div>L. 7800.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="txt2" id="REDEEM">
+            <div class="txtcontentgrid">
+                <div class="row1">Reclamar Codigo De GMLF</div>
+
+                <div class="row2">
+                    <div class="image"><img src="https://ar.facevital.com/cdn/shop/products/FV_giftcard50.jpg?v=1607884832&width=1080"></div>
+
+                    <div class="content">
+                        <div class="con1"><input type="text" ID="code" class="redeem-input" maxlength="14" placeholder="XXXX-XXXX-XXXX"></div>
+                        <div class="con2"><label for="code" class="hint">Enter your 12-character code</label></div>
+                        <div class="con3"><input type="submit" value="Reclamar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article3">
+            <div class="title">¿Que Ofrecemos?</div>
+            
+        
+            <div class="details">
+                <div class="d1">
+                    <div><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="dtit">Envios Rapidos</div>
+                    <div class="dinfo">En pedidos con un monto mayor a L2,000</div>
+                </div>
+
+                <div class="d2">
+                    <div><i class="fa-solid fa-receipt"></i></div>
+                    <div class="dtit">Politicas De Retornos</div>
+                    <div class="dinfo">Tienes 30 días para solicitar el cambio</div>
+                </div>
+
+                <div class="d3">
+                    <div><i class="fa-regular fa-credit-card"></i></div>
+                    <div class="dtit">Pagos Seguros</div>
+                    <div class="dinfo">Aceptamos tarjetas de Débito y Crédito</div>
+                </div>
+            </div>
+        </div>
+
+
+          <footer class="footer">
+  <div class="footercontent">
+    <h6>GMLF</h6>
+    <p>Ropa con estilo y calidad a nivel nacional</p>
+    <div class="footerlinks">
+      <a href="#">Inicio</a>
+      <a href="#">Tienda</a>
+      <a href="#">Contacto</a>
+      <a href="#">Política de privacidad</a>
+    </div>
+    <div class="footerredes">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p class="footercopy">© 2025 GMLF. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+    </main>
+
+   
+
+
+    
+</body>
+</html>
