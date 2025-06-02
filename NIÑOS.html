@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMLF | Estilos de Ropa para niños</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logopestaña.jpeg" type="image/png">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        /* Nav */
+        nav{
+        background-color:rgb(236, 228, 228) ;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+        font-family: "Montserrat";
+    }
+    .menu{
+        display: flex;
+        gap: 20px;
+    }
+    .iconos{
+        display: flex;
+        gap: 15px;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block ;
+        margin-right: 20px;
+        transition: all 0.2s ease;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    img{
+        width: 200px;
+        object-fit: cover; 
+      
+      
+    }
+    .logo{
+        float: left;
+        overflow: hidden;
+        
+    }
+    .cat{
+        font-size: 25px;
+    }
+
+    .cat:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .icono-perfil{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+    .icono-lupa{
+        float:right;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    .icono-perfil:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .icono-perfil:hover .login {
+      display: block;
+    }
+
+    .login {
+      display: none;
+      top: 23px;
+      right: 0;
+      background-color: rgb(185, 181, 181);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 16px black;
+      width: 250px;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .login h5 {
+      color: black;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 8px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #b7c0b9;
+      color: black;
+    }
+        /* Sección principal */
+        .cabecera-pagina {
+       
+            background-color: #aca8a8;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            background-image: url('moda_infantil.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode:overlay;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cabecera-pagina::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 0.6);
+            z-index: 1;
+        }
+        
+        .cabecera-pagina h1, .cabecera-pagina p {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cabecera-pagina h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .cabecera-pagina p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Categorías */
+        .categorias {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .tarjeta-categoria {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tarjeta-categoria:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .icono-categoria {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .titulo-categoria {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .descripcion-categoria {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .enlace-categoria {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .enlace-categoria:hover {
+            background-color: #555;
+        }
+        
+        /* Sección de información */
+        .seccion-info {
+            background-color: #f0f0f0;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+        
+        .contenedor-info {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .titulo-info {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .descripcion-info {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .tarjetas-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .tarjeta-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .tarjeta-info:hover {
+            transform: translateY(-10px);
+        }
+        
+        .icono-tarjeta-info {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .titulo-tarjeta-info {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        /* Footer */
+        .pie-pagina {
+    background-color: rgb(236, 228, 228);
+    color: black;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .contenido-pie h6 {
+    margin-bottom: 10px;
+    }
+
+    .enlaces-pie{
+    margin: 15px 0;
+    }
+
+    .redes-pie {
+    margin: 15px 0;
+    }
+
+    .enlaces-pie a{
+    color: #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    .redes-pie a {
+    color:  #00000052;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    .enlaces-pie a:hover{
+    color: #000000;
+    text-decoration: underline;
+    }
+    .redes-pie a:hover {
+    color: #000000;
+    text-decoration: underline;
+    }
+
+    .copyright-pie {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    }
+
+        /* Modales */
+        .modal-checkbox {
+            display: none;
+        }
+        
+        .modal-productos {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 50px 0;
+        }
+        
+        /* Mostrar modal cuando el checkbox esté marcado */
+        .modal-checkbox:checked + .modal-productos {
+            display: block;
+        }
+        
+        .contenido-modal {
+            background-color: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .cerrar-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .cerrar-modal:hover {
+            color: #666;
+        }
+        
+        .titulo-modal {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .cuadricula-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .item-galeria {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .item-galeria:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .img-galeria {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .info-galeria {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .info-galeria h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .precio {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+         nav {
+            padding: 20px;
+        }
+
+        img {
+            width: 150px;
+            object-fit: cover; 
+        }
+
+        .li{
+            font-size: 15px;
+            padding: 10px 5px;
+        }
+
+        .logo {
+            padding-left: 5px;
+        }
+
+        .cat {
+            font-size: 20px;
+        }
+
+        .cat:active {
+            transform: scale(1.1);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+
+
+        .cat:active {
+            transform: scale(1.1);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+
+
+            .categorias {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tarjetas-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+            flex-direction: column;
+            padding: 15px;
+            align-items: center;
+        }
+        
+        .logo {
+            margin-bottom: 15px;
+            padding-left: 0;
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .logo img {
+            width: 150px;
+            display: inline-block;
+        }
+
+        .menu {
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .menu li {
+            margin-right: 10px;
+            padding: 5px 2px;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+        .login{
+            left: 5px;
+        }
+              
+            .cabecera-pagina h1 {
+                font-size: 2.5rem;
+            }
+            
+           
+            .cuadricula-galeria {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .img-galeria {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 432px) {
+            nav {
+            padding: 15px;
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-bottom: 15px;
+            padding-left: 0;
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .logo img {
+            width: 120px;
+            display: inline-block;
+        }
+
+        .li{
+            padding: 10px 5px;
+        }
+
+        .cat {
+            font-size: 25px;
+        }
+
+        .cat:active {
+            transform: scale(1.1);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .login .entrar {
+            width: 100%;
+            padding: 8px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login button[type=submit]:active {
+            background: linear-gradient(to bottom right, rgb(91, 91, 91), black);
+            color: rgb(255, 255, 255);
+        }
+
+            
+
+
+            .categorias {
+                grid-template-columns: 1fr;
+            }
+            
+            .tarjetas-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .cabecera-pagina h1 {
+                font-size: 2rem;
+            }
+            
+            .cabecera-pagina p {
+                font-size: 1rem;
+            }
+            
+            .iconos-sociales {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logotipo2.png"></a>
+            </div>
+
+            <ul class="menu">
+                <li class="cat mujer" ><a  href="PAG_HOMBRES_ACT.html">Hombre</a></li>
+                <li>|</li>
+                <li class="cat hombre"  ><a href="mujer.html">Mujer</a></li>
+                <li>|</li>
+                <li class="cat niños"  ><a href="NIÑOS.html">Niños</a></li>
+            </ul>
+
+            <div class="iconos">
+                <li class="icono-perfil">
+                <i class="fa-solid fa-user"></i>
+                    <div class="login">
+                        <h5>LOGIN</h5>
+                        <input type="email" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Entrar</button>
+                    </div>
+                </li>
+                <li class="icono-lupa"><a href="#"><i class="fa-solid fa-magnifying-glass"></a></i></li>
+            </div>
+    </nav>
+    
+    <div class="cabecera-pagina">
+        <h1>Moda Infantil</h1>
+        <p>Descubre nuestra colección de ropa para niños con estilo, comodidad y calidad</p>
+    </div>
+    
+    <div class="contenedor">
+        <div class="categorias">
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3 class="titulo-categoria">Camisetas</h3>
+                <p class="descripcion-categoria">Camisetas cómodas y con estilo para los más pequeños</p>
+                <label for="camisetas-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+            
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-socks"></i>
+                </div>
+                <h3 class="titulo-categoria">Pantalones</h3>
+                <p class="descripcion-categoria">Pantalones resistentes para todas las aventuras</p>
+                <label for="pantalones-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+            
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-hat-wizard"></i>
+                </div>
+                <h3 class="titulo-categoria">Accesorios</h3>
+                <p class="descripcion-categoria">Complementos para completar el look perfecto</p>
+                <label for="accesorios-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+            
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-mitten"></i>
+                </div>
+                <h3 class="titulo-categoria">Abrigos</h3>
+                <p class="descripcion-categoria">Abrigos y chaquetas para mantenerse calentitos</p>
+                <label for="abrigos-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+            
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <h3 class="titulo-categoria">Calzado</h3>
+                <p class="descripcion-categoria">Zapatos cómodos para pies en crecimiento</p>
+                <label for="calzado-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+            
+            <div class="tarjeta-categoria">
+                <div class="icono-categoria">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="titulo-categoria">Conjuntos</h3>
+                <p class="descripcion-categoria">Conjuntos completos para ocasiones especiales</p>
+                <label for="conjuntos-modal" class="enlace-categoria">Ver productos</label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Camisetas -->
+    <input type="checkbox" id="camisetas-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="camisetas-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Camisetas</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9OsMoYzDIAcItp2HLR8klRe0agDdxeZwbFnRlwdrz_0LqmDcITQfbaAApZBygd92VG4&usqp=CAU" alt="Camiseta Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Camiseta Rayas</h3>
+                        <p class="precio">L.338.26</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsNAMuJy2FnMjiEoBzXzynnQhWfOcgrXWKA&s" alt="Camiseta Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Camiseta Estampada</h3>
+                        <p class="precio">L.389.99</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://m.media-amazon.com/images/I/71yfqjC9DEL._AC_SX522_.jpg" alt="Camiseta Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Camiseta Superhéroe</h3>
+                        <p class="precio">L.425.50</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://d5gag3xtge2og.cloudfront.net/producao/35059465/G/m_0103_13000640906.png" alt="Camiseta Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Camiseta Deportiva</h3>
+                        <p class="precio">L.375.75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Pantalones -->
+    <input type="checkbox" id="pantalones-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="pantalones-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Pantalones</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWoJtQqr3jf1PEipc_xgQECdoFvKfD3CapzFCRTRAH-2ZSjJSkx3y98qCuyxNSm63XmlQ&usqp=CAU" alt="Pantalón Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Pantalón Jogger</h3>
+                        <p class="precio">L.520.44</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6BdAlSxFFLKQArzSJyuslMS47kq617yFFag&s" alt="Pantalón Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Pantalón Denim</h3>
+                        <p class="precio">L.598.68</p>
+                    </div>
+                </div>
+                <!-- Nuevos productos -->
+                <div class="item-galeria">
+                    <img src="https://plazavea.vteximg.com.br/arquivos/ids/9307352-1000-1000/image-6c8dcca1894f49d38d1feab55c8240bb.jpg?v=637846694040200000" alt="Pantalón Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Pantalón Cargo</h3>
+                        <p class="precio">L.545.30</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://assets.theplace.com/image/upload/t_plp_img_m,f_auto,q_auto/v1/ecom/assets/products/tcp/3020856/3020856_IV.png" alt="Pantalón Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Pantalón Deportivo</h3>
+                        <p class="precio">L.490.25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Accesorios -->
+    <input type="checkbox" id="accesorios-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="accesorios-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Accesorios</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://www.sesnines.es/img/cms/pulsera-botones-ninos.jpg" alt="Accesorio Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Gorro Divertido</h3>
+                        <p class="precio">L.221.34</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRimAkn-P4G05FlTdFDt0XdbR948t87ii454w&s" alt="Accesorio Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Mochila Pequeña</h3>
+                        <p class="precio">L.390.60</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://cdnx.jumpseller.com/regalogo/image/9058391/resize/540/540?1590868271" alt="Accesorio Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Bufanda Infantil</h3>
+                        <p class="precio">L.185.50</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://www.raccoongames.es/img/productos/dc-comics-gorra-batman/Captura%20de%20pantalla%202018-09-11%20a%20las%2019.43.09.png" alt="Accesorio Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Gorra Estampada</h3>
+                        <p class="precio">L.210.25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Abrigos -->
+    <input type="checkbox" id="abrigos-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="abrigos-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Abrigos</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUogDNQlA6nPiCCYZ9NocEe8u2WDaH7p0Xww&s" alt="Abrigo Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Chaqueta Acolchada</h3>
+                        <p class="precio">L.1041.34</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://st2.depositphotos.com/3123063/8167/i/450/depositphotos_81670778-stock-photo-colorful-sweater-for-children.jpg" alt="Abrigo Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Cortavientos Infantil</h3>
+                        <p class="precio">L.911.24</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://acdn-us.mitiendanube.com/stores/001/389/073/products/sueter-infantil-masculino-losango-100-acrilico-taizza-malhas-311-3456289fa40b2bfdc616832543903187-640-0.png" alt="Abrigo Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Suéter Infantil</h3>
+                        <p class="precio">L.750.50</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://assets.theplace.com/image/upload/t_plp_img_m,f_auto,q_auto,dpr_1/v1/ecom/assets/products/TCP/3046843/3046843_IV.png" alt="Abrigo Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Chaqueta Impermeable</h3>
+                        <p class="precio">L.980.75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Calzado -->
+    <input type="checkbox" id="calzado-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="calzado-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Calzado</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKkOW44IX7oOP91IOzj3d9kqtnK43JuUCXgg&s" alt="Calzado Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Tenis Deportivos</h3>
+                        <p class="precio">L.650.00</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://paylesshn.vtexassets.com/arquivos/ids/485326-450-450?v=638670378207830000&width=450&height=450&aspect=true" alt="Calzado Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Zapatos Casuales</h3>
+                        <p class="precio">L.450.00</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://paylesshn.vtexassets.com/arquivos/ids/485305-800-800?v=638670378117370000&width=800&height=800&aspect=true" alt="Calzado Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Sandalias Infantiles</h3>
+                        <p class="precio">L.350.50</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://www.newcollection.cl/wp-content/uploads/2024/05/Photoroom_20240524_205744.jpg" alt="Calzado Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Botas Impermeables</h3>
+                        <p class="precio">L.580.25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Conjuntos -->
+    <input type="checkbox" id="conjuntos-modal" class="modal-checkbox">
+    <div class="modal-productos">
+        <div class="contenido-modal">
+            <label for="conjuntos-modal" class="cerrar-modal">&times;</label>
+            <h2 class="titulo-modal">Conjuntos</h2>
+            
+            <div class="cuadricula-galeria">
+                <div class="item-galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzJXfAz0fuHK0Qxr3zPATF_FOfzmS9tKSYf6LkwhkLKgBxWlwK9dDqCJFS_WjBZnyzeRk&usqp=CAU" alt="Conjunto Infantil 1" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Conjunto Deportivo</h3>
+                        <p class="precio">L.780.00</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://lindamia.co/cdn/shop/files/071F7FF3-43D0-482D-ACA8-2B0D5B8448E9.jpg?v=1715461808&width=1946" alt="Conjunto Infantil 2" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Conjunto Elegante</h3>
+                        <p class="precio">L.920.00</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://i.pinimg.com/736x/a9/30/8a/a9308a2ccf2f3162fdb45860b2a144f7.jpg" alt="Conjunto Infantil 3" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Conjunto Casual</h3>
+                        <p class="precio">L.850.50</p>
+                    </div>
+                </div>
+                <div class="item-galeria">
+                    <img src="https://s.alicdn.com/@sc04/kf/Hf074f38439af415191fb4d5c9294e9det.png_720x720q50.png" alt="Conjunto Infantil 4" class="img-galeria">
+                    <div class="info-galeria">
+                        <h3>Conjunto Escolar</h3>
+                        <p class="precio">L.750.25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+  <div class="contenido-pie">
+    <h6>GMLF</h6>
+    <p>Ropa con estilo y calidad a nivel nacional</p>
+    <div class="enlaces-pie">
+      <a href="#">Inicio</a>
+      <a href="#">Tienda</a>
+      <a href="#">Contacto</a>
+      <a href="#">Política de privacidad</a>
+    </div>
+    <div class="redes-pie">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p class="copyright-pie">© 2025 GMLF. Todos los derechos reservados.</p>
+  </div>
+</footer>
+    
+    
+</body>
+</html>
